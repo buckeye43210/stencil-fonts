@@ -110,9 +110,9 @@ Handcrafted postscript font shapes.
 
 /line_h {
     newpath
-    0 48	moveto
-    450	 48 lineto  %% horizontal reference line
-    0.5    setlinewidth
+    0    48    moveto
+    450	 48    lineto  %% horizontal reference line
+    0.5        setlinewidth
     setrgbcolor
     0.5 setlinewidth
     stroke
