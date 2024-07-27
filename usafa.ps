@@ -59,19 +59,45 @@
 /block_a {
     newpath
     0	0	moveto
-    36	98	lineto  %% diagonal up
+    37	98	lineto  %% diagonal up
     56	98	lineto  %% horizontal right
     20  0   lineto  %% diagonal down
     closepath
 
     59  96  moveto
-    90	0	lineto  %% diagonal down
-    71	0	lineto  %% horizontal left
+    93	0	lineto  %% diagonal down
+    72	0	lineto  %% horizontal left
     60	35	lineto  %% diagonal up
     37	35	lineto  %% horizontal left
     44  55  lineto  %% diagonal up
     55  55  lineto  %% horizontal right
     50  70  lineto  %% diagonal up
+    closepath
+    gsave
+    setrgbcolor
+    fill
+    grestore
+    1 setlinewidth
+    0 setgray
+    stroke
+} def
+
+/flip_a {
+    newpath
+    0	0	moveto
+    -37	98	lineto  %% diagonal up
+    -56	98	lineto  %% horizontal left
+    -20  0   lineto  %% diagonal down
+    closepath
+
+    -59  96  moveto
+    -93	0	lineto  %% diagonal down
+    -72	0	lineto  %% horizontal right
+    -60	35	lineto  %% diagonal up
+    -37	35	lineto  %% horizontal right
+    -44  55  lineto  %% diagonal up
+    -55  55  lineto  %% horizontal left
+    -50  70  lineto  %% diagonal up
     closepath
     gsave
     setrgbcolor
@@ -105,14 +131,13 @@
 
 /line_h {
     newpath
-    0 48	moveto
-    450	 48 lineto  %% horizontal reference line
+    0   48	moveto
+    612 48 lineto  %% horizontal reference line
     0.5    setlinewidth
     setrgbcolor
     0.5 setlinewidth
     stroke
 } def
-
 
 99 600 translate
 255 255 255 block_u
@@ -129,7 +154,21 @@
 45 0 translate
 255 255 255 block_a
 
-%% -350 0 translate
-%% 255 255 255 line_h
+%% -99 0 translate
+%% 0 0 255 line_h
 
+-305 -300 translate
+255 255 255 block_u
+
+85 0 translate
+255 255 255 block_s
+
+169 0 translate
+255 255 255 flip_a
+
+6 0 translate
+255 255 255 block_f
+
+140 0 translate
+255 255 255 flip_a
 
